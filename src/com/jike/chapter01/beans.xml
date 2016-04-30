@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="helloChina" class="com.jike.chapter01.HelloChina"/>
+	
+	<bean id="helloEnglish" class="com.jike.chapter01.HelloEnglish"/>
+
+	<bean id="person" class="com.jike.chapter01.Person">
+		<!-- 给person的sayHello属性注入bean helloEnglish-->
+		<property name="sayHello" ref="helloEnglish"></property>
+	</bean>
+
+</beans>
